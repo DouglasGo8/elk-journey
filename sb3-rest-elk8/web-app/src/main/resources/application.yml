@@ -1,0 +1,35 @@
+camel:
+  springboot:
+    name: WebApp
+    main-run-controller: true
+  thread-pool:
+    config:
+      pool-size: 3
+      max-pool-size: 5
+  component:
+    elasticsearch:
+      #certificate-path: /Users/dougdb/workspace/intelliJ/elk-journey/.secret/ca.crt
+      user: elastic
+      password: welcome1
+      host-addresses: localhost:9200
+      #enable-s-s-l: true
+
+# Spring
+spring:
+  main:
+    web-application-type: none
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration
+
+# Management
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,camelroutes
+  endpoint:
+    health:
+      enabled: true
+    camelroutes:
+      enabled: true
+      read-only: true
