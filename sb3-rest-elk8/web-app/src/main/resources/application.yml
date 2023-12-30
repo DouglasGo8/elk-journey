@@ -23,6 +23,12 @@ spring:
 
 # Management
 management:
+  #elastic:
+    #metrics:
+      #export:
+        #step: 30s
+        #user-name: elastic
+        #password: welcome1
   endpoints:
     web:
       exposure:

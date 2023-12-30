@@ -367,3 +367,22 @@ output {
 	}
 }
 ----
+
+.Filebeat Kibana Indexes
+[source, html]
+----
+GET /_template/filebeat-*
+----
+
+=== Filebeat Modules
+
+
+. Automatically benefit from boilerplate configuration
+
+. Reduce the risk of mistakes (e.g forgetting to handle some scenarios)
+
+. Make use of modules as much possible
+
+. Configure manual inputs when a suitable module is not available
+
+. Prefer either using modules, or not using modules at all; a combination is harder to maintain
